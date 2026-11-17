@@ -4,6 +4,10 @@ from ..models.character import Character
 from ..models.greeting import Greeting
 from sqlalchemy import func, union, except_
 
+from google import genai
+
+client = genai.Client()
+
 bp = Blueprint("characters", __name__, url_prefix="/characters")
 
 
